@@ -1,0 +1,21 @@
+{
+    "name": "rafael.paulino/wpapi",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Rafael Paulino",
+            "email": "rafaclasses@gmail.com",
+            "homepage": "http://rafaacademy.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": { "WordPress\\": "src/" },
+        "classmap": [
+            "src"
+        ]
+    }
+}
