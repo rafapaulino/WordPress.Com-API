@@ -12,7 +12,8 @@ class WordPressLoginUrl
             'response_type' => 'code',
             'client_id'     => $client,
             'state'         => $state,
-            'redirect_uri'  => $redirect
+            'redirect_uri'  => $redirect,
+            'scope' => 'global'
         ) );
     }
 

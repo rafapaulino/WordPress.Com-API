@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'WordPress\\WordPressAuth' => $baseDir . '/src/WordPressAuth.php',
     'WordPress\\WordPressLoginUrl' => $baseDir . '/src/WordPressLoginUrl.php',
+    'WordPress\\WordPressMe' => $baseDir . '/src/WordPressMe.php',
     'WordPress\\WordPressRequest' => $baseDir . '/src/WordPressRequest.php',
     'WordPress\\WordPressStateManager' => $baseDir . '/src/WordPressStateManager.php',
 );

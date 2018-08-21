@@ -18,7 +18,8 @@ class WordPressAuth extends WordPressRequest
             'redirect_uri'  => $redirect,
             'client_secret' => $secret,
             'code'          => $code,
-            'grant_type'    => 'authorization_code'
+            'grant_type'    => 'authorization_code',
+            'scope' => 'global'
         );
 
         $this->_request = $request;
