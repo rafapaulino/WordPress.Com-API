@@ -31,4 +31,32 @@ class WordPressMe extends WordPressRequest
             $this->_options
         );
     }
+
+    public function getSiteInfo($id)
+    {
+        $result = $this->send(
+            'https://public-api.wordpress.com/rest/v1.1/sites/' . $id, 
+            array(),
+            array()
+        );
+
+        $result['posts'] = $this->getSitePosts($result);
+
+        return $result;
+    }
+
+    private function getSitePosts($json)
+    {
+        $result = array();
+
+        if ( isset($json["meta"]["links"]["posts"]) ) {
+            $result = $this->send(
+                $json["meta"]["links"]["posts"], 
+                array(),
+                array()
+            );
+        }
+
+        return $result;
+    }
 }

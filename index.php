@@ -45,20 +45,25 @@ if( empty($code) ) {
 
     $token = $auth->getToken();
 
-    echo '<pre>';
+    echo '<h4>Token:</h4><pre>';
     var_dump($token);
-    echo '</pre>';
+    echo '</pre><hr>';
 
     
     $me = new WordPressMe($token["access_token"]);
     $user = $me->getUser();
 
-    echo '<pre>';
+    echo '<h4>Informações do usuário:</h4><pre>';
     var_dump($user);
-    echo '</pre>';
+    echo '</pre><hr>';
 
     $sites = $me->getSites();
-    echo '<pre>';
+    echo '<h4>Sites do Usuário:</h4><pre>';
     var_dump($sites);
-    echo '</pre>';
+    echo '</pre><hr>';
+
+    $site = $me->getSiteInfo(15303042);
+    echo '<h4>Informações sobre um site em especifíco:</h4><pre>';
+    var_dump($site);
+    echo '</pre><hr>';
  }
