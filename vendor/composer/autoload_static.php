@@ -24,6 +24,7 @@ class ComposerStaticInitf141b97675a61dc4f3e1551eecf15acc
         'WordPress\\WordPressAuth' => __DIR__ . '/../..' . '/src/WordPressAuth.php',
         'WordPress\\WordPressLoginUrl' => __DIR__ . '/../..' . '/src/WordPressLoginUrl.php',
         'WordPress\\WordPressMe' => __DIR__ . '/../..' . '/src/WordPressMe.php',
+        'WordPress\\WordPressPost' => __DIR__ . '/../..' . '/src/WordPressPost.php',
         'WordPress\\WordPressRequest' => __DIR__ . '/../..' . '/src/WordPressRequest.php',
         'WordPress\\WordPressStateManager' => __DIR__ . '/../..' . '/src/WordPressStateManager.php',
     );

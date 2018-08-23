@@ -6,6 +6,7 @@ use WordPress\WordPressStateManager;
 use WordPress\WordPressLoginUrl;
 use WordPress\WordPressAuth;
 use WordPress\WordPressMe;
+use WordPress\WordPressPost;
 
 $authenticate = 'https://public-api.wordpress.com/oauth2/authorize';
 $client_id = '62951';
@@ -65,5 +66,15 @@ if( empty($code) ) {
     $site = $me->getSiteInfo(15303042);
     echo '<h4>Informações sobre um site em especifíco:</h4><pre>';
     var_dump($site);
+    echo '</pre><hr>';
+
+    $post = new WordPressPost($token["access_token"], 15303042);
+    $result = $post->add(
+        'Teste de post com a api',
+        '<p>isso é um teste -> <a href="http://www.uol.com.br">Link</a></p>',
+        'este é o resumo maroto'
+    );
+    echo '<h4>Informações sobre o post:</h4><pre>';
+    var_dump($result);
     echo '</pre><hr>';
  }
