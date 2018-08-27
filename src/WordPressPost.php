@@ -49,4 +49,13 @@ class WordPressPost extends WordPressRequest
             $this->_options
         ); 
     }
+
+    public function delete($id)
+    {
+        return $this->send(
+            'https://public-api.wordpress.com/rest/v1.1/sites/' . $this->_site . '/posts/' . $id . '/delete', 
+            array(),
+            $this->_options
+        ); 
+    }
 }

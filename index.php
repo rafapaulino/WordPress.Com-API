@@ -82,4 +82,9 @@ if( empty($code) ) {
     echo '<h4>Informações sobre o post adicionado:</h4><pre>';
     var_dump($myPost);
     echo '</pre><hr>';
+
+    $del = $post->delete($result['ID']);
+    echo '<h4>Deletando o post:</h4><pre>';
+    var_dump($del);
+    echo '</pre><hr>';
  }
