@@ -83,8 +83,18 @@ if( empty($code) ) {
     var_dump($myPost);
     echo '</pre><hr>';
 
-    $del = $post->delete($result['ID']);
+    $edit = $post->edit(
+        $result['ID'],
+        'Novo Teste de post com a api' . time(),
+        '<p>isso é um teste de edição -> <a href="http://www.bol.com.br">Link bol</a></p>',
+        'este é o resumo maroto novamente'
+    );
+    echo '<h4>Informações sobre o post editado:</h4><pre>';
+    var_dump($edit);
+    echo '</pre><hr>';
+
+    /*$del = $post->delete($result['ID']);
     echo '<h4>Deletando o post:</h4><pre>';
     var_dump($del);
-    echo '</pre><hr>';
+    echo '</pre><hr>';*/
  }
