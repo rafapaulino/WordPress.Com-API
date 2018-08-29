@@ -41,6 +41,56 @@ class WordPressPost extends WordPressRequest
         );
     }
 
+    public function addImageInPost($image, $postId)
+    {
+        $body = array(
+            'media_urls' => $image,
+        );
+        
+        $this->_options[] = 'Content-Type: application/x-www-form-urlencoded';
+        
+        $result = $this->send(
+            'https://public-api.wordpress.com/rest/v1.1/sites/' . $this->_site . '/media/new/', 
+            $body,
+            $this->_options
+        );
+
+        if ( isset($result['media'][0]['ID']) ) {
+            $result['join_image'] = $this->joinImageToPost($result['media'][0]['ID'], $postId);
+            $result['featured_image'] = $this->featuredImage($result['media'][0]['ID'], $postId);
+        }
+
+        return $result;
+    }
+
+    private function joinImageToPost($imageId, $parentId)
+    {
+        $body = array(
+            'parent_id' => $parentId
+        );
+        
+        $this->_options[] = 'Content-Type: application/x-www-form-urlencoded';
+        return $this->send(
+            'https://public-api.wordpress.com/rest/v1.2/sites/' . $this->_site . '/media/' . $imageId . '/edit/', 
+            $body,
+            $this->_options
+        );
+    }
+
+    private function featuredImage($imageId, $postId)
+    {
+        $body = array(
+            'featured_image' => $imageId
+        );
+        
+        $this->_options[] = 'Content-Type: application/x-www-form-urlencoded';
+        return $this->send(
+            'https://public-api.wordpress.com/rest/v1.2/sites/' . $this->_site . '/posts/' . $postId, 
+            $body,
+            $this->_options
+        );
+    }
+
     public function getPostById($id)
     {
         return $this->send(

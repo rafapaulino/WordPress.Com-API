@@ -97,4 +97,9 @@ if( empty($code) ) {
     echo '<h4>Deletando o post:</h4><pre>';
     var_dump($del);
     echo '</pre><hr>';*/
+
+    $image = $post->addImageInPost('http://visitsetubal.com.pt/wp-content/uploads/2013/03/Praia_Albarquel_02.jpg',$result['ID']);
+    echo '<h4>Adicionando uma imagem no post:</h4><pre>';
+    var_dump($image);
+    echo '</pre><hr>';
  }
