@@ -44,6 +44,7 @@ class WordPressRequest
             }
 
             $response = curl_exec($this->_ch);
+            var_dump($response);
             return json_decode($response, true);
 
         } catch(\Exception $e) {

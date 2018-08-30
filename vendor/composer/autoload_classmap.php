@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'WordPress\\WordPressAuth' => $baseDir . '/src/WordPressAuth.php',
+    'WordPress\\WordPressFacade' => $baseDir . '/src/WordPressFacade.php',
     'WordPress\\WordPressLoginUrl' => $baseDir . '/src/WordPressLoginUrl.php',
     'WordPress\\WordPressMe' => $baseDir . '/src/WordPressMe.php',
     'WordPress\\WordPressPost' => $baseDir . '/src/WordPressPost.php',

@@ -22,6 +22,7 @@ class ComposerStaticInitf141b97675a61dc4f3e1551eecf15acc
 
     public static $classMap = array (
         'WordPress\\WordPressAuth' => __DIR__ . '/../..' . '/src/WordPressAuth.php',
+        'WordPress\\WordPressFacade' => __DIR__ . '/../..' . '/src/WordPressFacade.php',
         'WordPress\\WordPressLoginUrl' => __DIR__ . '/../..' . '/src/WordPressLoginUrl.php',
         'WordPress\\WordPressMe' => __DIR__ . '/../..' . '/src/WordPressMe.php',
         'WordPress\\WordPressPost' => __DIR__ . '/../..' . '/src/WordPressPost.php',
