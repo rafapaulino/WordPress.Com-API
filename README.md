@@ -4,13 +4,14 @@ PHP library for post in wordpress.com.
 
 ## Features
 
+- `v1.0.3` Update readme.
 - `v1.0.2` Change license and readme.
 - `v1.0.0` Class start with get user, get sites, add, edit and delete post.
 
 -----
 
 ## Example of use
-Install: composer require rafael.paulino/gab
+Install: composer require rafael.paulino/wpapi
 
 ```php
 <?php
