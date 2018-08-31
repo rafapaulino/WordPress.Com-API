@@ -14,7 +14,7 @@ $retorno = $facade->getToken();
 if ($retorno['url'] !== "") {
     echo '<a href="' . $retorno['url'] . '">Login</a>';
 } else {
-    /*
+    
     $user = $facade->getUserInfo();
     echo '<h1>User and Site Info:</h1><pre>';
     var_dump($user);
@@ -57,7 +57,7 @@ if ($retorno['url'] !== "") {
     var_dump($post);
     echo '</pre><hr>';
 
-*/
+
     $del = $facade->postDel(
         15303042,
         147
