@@ -4,9 +4,9 @@ include 'vendor/autoload.php';
 //https://developer.wordpress.com/2014/10/23/oauth2-global-scope-tokens/
 use WordPress\WordPressFacade;
 
-$client_id = '62951';
+$client_id = '';
 $redirect_url = 'http://localhost:81/wpapi/';
-$secret = 'EeJubCqV3J0A2tAXfqeeBC5QNzlsififiMiHBykOzeCK8GbVrhWSffGWChoLq030';
+$secret = '';
 
 $facade = new WordPressFacade($client_id, $redirect_url, $secret);
 $retorno = $facade->getToken();
