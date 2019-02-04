@@ -173,7 +173,7 @@ class WordPressFacade
 
             return array(
                 'status' => 'success',
-                'post' => $del
+                'post' => $post
             );
 
         } else {
